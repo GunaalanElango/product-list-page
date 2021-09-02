@@ -1,0 +1,18 @@
+.Wrapper {
+  display: grid;
+  grid-template-rows: 45px auto auto;
+  grid-template-areas:
+    "header"
+    "filter"
+    "products";
+}
+
+@media screen and (min-width: 768px) {
+  .Wrapper {
+    grid-template-rows: 55px auto;
+    grid-template-columns: 20% auto;
+    grid-template-areas:
+      "header header"
+      "filter products";
+  }
+}

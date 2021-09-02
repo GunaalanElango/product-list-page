@@ -1,0 +1,51 @@
+.Filter {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: flex-start;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  grid-area: filter;
+}
+
+.Filter h4 {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.FilterOptContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.Filter p {
+  margin: 1.5px 0;
+  font-size: 0.9rem;
+  padding-right: 15px;
+}
+
+.Active {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .Filter {
+    grid-area: filter;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    position: fixed;
+    margin-top: 55px;
+    width: 20%;
+    height: 100vh;
+  }
+
+  .Filter h4 {
+    font-size: 1.5rem;
+  }
+
+  .Filter p:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+.ProductList {
+  grid-area: products;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 50%);
+  justify-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .ProductList {
+    grid-area: products;
+    grid-template-columns: repeat(5, 20%);
+  }
+}
