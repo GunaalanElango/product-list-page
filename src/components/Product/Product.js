@@ -9,7 +9,6 @@ const Product = ({ name, price, imageURL }) => {
       </div>
       <h2>{name}</h2>
       <h4>&#8377; {price}</h4>
-      <button className={classes.AddToCart}>Add to cart</button>
     </div>
   );
 };

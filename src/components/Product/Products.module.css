@@ -6,9 +6,36 @@
   justify-items: center;
 }
 
+.NoProductList {
+  width: 100%;
+  grid-area: products;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 500px) {
+  .ProductList {
+    grid-area: products;
+    grid-template-columns: 33% 33% auto;
+  }
+
+  .NoProductList {
+    grid-area: products;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .ProductList {
     grid-area: products;
     grid-template-columns: repeat(5, 20%);
+    grid-row-gap: 10px;
+  }
+
+  .NoProductList {
+    grid-area: products;
+    display: flex;
+    justify-content: center;
   }
 }

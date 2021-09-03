@@ -27,7 +27,9 @@
 }
 
 .Active {
-  text-decoration: underline;
+  color: white;
+  background-color: #630f39;
+  padding: 2px 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -47,5 +49,11 @@
 
   .Filter p:hover {
     cursor: pointer;
+  }
+
+  .Active {
+    color: white;
+    background-color: #630f39;
+    padding: 5px 10px;
   }
 }

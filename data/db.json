@@ -7,19 +7,19 @@
             "price": 1233
         },
         {
-            "id": 4,
+            "id": 2,
             "imageURL": "https://26b5c92bej542nbc9b3nbw5o-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/7ac3c86e-e80f-4f27-811d-0a02045e5f3e-1000x1063.jpeg",
             "name": "MRF cricket bat",
             "price": 23444
         },
         {
-            "id": 5,
+            "id": 3,
             "imageURL": "https://26b5c92bej542nbc9b3nbw5o-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/7ac3c86e-e80f-4f27-811d-0a02045e5f3e-1000x1063.jpeg",
             "name": "MRF cricket bat",
             "price": 2242
         },
         {
-            "id": 2,
+            "id": 4,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
             "price": 4000
@@ -28,49 +28,37 @@
             "id": 6,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
-            "price": 334
-        },
-        {
-            "id": 7,
-            "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
-            "name": "Football Boot",
             "price": 34534
         },
         {
-            "id": 8,
+            "id": 7,
             "imageURL": "https://26b5c92bej542nbc9b3nbw5o-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/7ac3c86e-e80f-4f27-811d-0a02045e5f3e-1000x1063.jpeg",
             "name": "MRF cricket bat",
             "price": 10000
         },
         {
-            "id": 9,
+            "id": 8,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
             "price": 20000
         },
         {
-            "id": 10,
+            "id": 9,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
             "price": 3532
         },
         {
-            "id": 11,
+            "id": 10,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
             "price": 2353
         },
         {
-            "id": 121,
+            "id": 11,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
-            "price": 8797
-        },
-        {
-            "id": 112,
-            "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
-            "name": "Football Boot",
-            "price": 878787
+            "price": 3532
         }
     ]
 }
