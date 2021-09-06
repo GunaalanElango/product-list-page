@@ -9,26 +9,19 @@ import classes from "./App.module.css";
 
 function App() {
   const [productList, setProductList] = useState([]);
+  const [showProducts, setShowProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [ascending, setAcending] = useState(false);
   const [descending, setDescending] = useState(false);
-
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("http://localhost:8000/products");
-      return response.data;
-    } catch (err) {
-      throw err;
-    }
-  };
 
   useEffect(() => {
     (async () => {
       try {
         setIsLoading(true);
-        const response = await fetchProducts();
+        const response = await axios.get("http://localhost:8000/products");
         setIsLoading(false);
-        setProductList(response);
+        setProductList(response.data);
+        setShowProducts(response.data);
       } catch (err) {
         setIsLoading(false);
         alert(err);
@@ -37,34 +30,52 @@ function App() {
   }, []);
 
   const searchProductHandler = async (query) => {
-    try {
-      setAcending(false);
-      setDescending(false);
-      setIsLoading(true);
-      const response = await fetchProducts();
+    setAcending(false);
+    setDescending(false);
+    let queryString = query.trim().toLowerCase();
+    let queryStrings = [];
 
-      if (query.trim().length === 0) {
-        setIsLoading(false);
-        setProductList(response);
-        return;
-      }
-
-      const prodList = response.filter((product) => {
-        return product.name.toUpperCase().includes(query.toUpperCase());
-      });
-      setIsLoading(false);
-      setProductList(prodList);
-    } catch (error) {
-      setIsLoading(false);
-      alert(error);
+    if (queryString.length === 0) {
+      setShowProducts(productList);
+      return;
+    } else {
+      queryStrings = queryString.split(" ");
     }
+
+    let prodList = [];
+    prodList = productList.filter((product) => {
+      let results = [];
+      for (const string of queryStrings) {
+        results.push(product.name.toLowerCase().includes(string));
+      }
+      return results.every((result) => result === true);
+    });
+    let prodList2 = [];
+
+    prodList2 = productList.filter((product) => {
+      let result = false;
+      for (const string of queryStrings) {
+        if (product.name.toLowerCase().includes(string)) {
+          result = true;
+          break;
+        }
+      }
+      return result;
+    });
+
+    for (const product of prodList2) {
+      let isFound = prodList.find((prod) => prod.id === product.id);
+      if (!isFound) {
+        prodList.push(product);
+      }
+    }
+    setShowProducts(prodList);
   };
 
   const sortProductHandler = (ascending) => {
-    setIsLoading(true);
-    const prodList = [...productList];
     setAcending(false);
     setDescending(false);
+    const prodList = [...showProducts];
 
     prodList.sort((a, b) => a.price - b.price);
     if (ascending) {
@@ -73,8 +84,7 @@ function App() {
       prodList.reverse();
       setDescending(true);
     }
-    setIsLoading(false);
-    setProductList(prodList);
+    setShowProducts(prodList);
   };
 
   return (
@@ -89,7 +99,7 @@ function App() {
           descending={descending}
           sortClicked={sortProductHandler}
         />
-        {!isLoading ? <Products list={productList} /> : <Spinner />}
+        {!isLoading ? <Products list={showProducts} /> : <Spinner />}
       </div>
       <Footer />
     </Fragment>

@@ -1,8 +1,12 @@
+.Main {
+  width: 100%;
+  min-height: 400px;
+}
+
 .ProductList {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  min-height: 400px;
 }
 
 .ProductList h1 {
@@ -12,9 +16,44 @@
   margin-top: 50px;
 }
 
+.Breadcrumbs {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.NoOfProduct span {
+  font-size: 1.2rem;
+  color: #137450;
+}
+
 @media screen and (min-width: 768px) {
-  .ProductList {
+  .Main {
     width: 80%;
-    min-height: 400px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Breadcrumbs {
+    font-size: 1rem;
+  }
+
+  .NoOfProduct span {
+    font-size: 1.5rem;
+    color: #137450;
+  }
+
+  .ProductList {
+    width: 100%;
+  }
+
+  .ProductList h1 {
+    font-size: 1.5rem;
   }
 }

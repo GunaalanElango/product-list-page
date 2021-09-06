@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   background-color: white;
-  height: 25px;
+  height: 35px;
   border-radius: 2px;
 }
 
@@ -12,7 +12,7 @@
   outline: none;
   width: 90%;
   height: 100%;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 0 8px;
 }
 

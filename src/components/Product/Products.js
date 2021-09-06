@@ -17,7 +17,17 @@ const Products = ({ list }) => {
     products = <h1>Sorry, No results found</h1>;
   }
 
-  return <div className={classes.ProductList}>{products}</div>;
+  return (
+    <div className={classes.Main}>
+      <div className={classes.Breadcrumbs}>
+        <p className={classes.BreadcrumbsNav}>Home / Products / Sports</p>
+        {list.length !== 0 ? (
+          <p className={classes.NoOfProduct}><span>{list.length}</span> Results</p>
+        ) : null}
+      </div>
+      <div className={classes.ProductList}>{products}</div>
+    </div>
+  );
 };
 
 export default Products;
