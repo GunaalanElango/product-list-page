@@ -7,8 +7,8 @@ const Product = ({ name, price, imageURL }) => {
       <div className={classes.ImageContainer}>
         <img alt="Product" src={imageURL} />
       </div>
-      <h2>{name}</h2>
-      <h4>&#8377; {price}</h4>
+      <p className={classes.ProductName}>{name}</p>
+      <p className={classes.ProductPrice}>&#8377; {price}</p>
     </div>
   );
 };

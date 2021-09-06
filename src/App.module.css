@@ -1,20 +1,16 @@
 .Wrapper {
-  display: grid;
-  grid-template-rows: 45px auto auto auto;
-  grid-template-areas:
-    "header"
-    "filter"
-    "search"
-    "products";
+  width: 100%;
+  margin-top: 70px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
   .Wrapper {
-    grid-template-rows: 55px auto auto;
-    grid-template-columns: 20% auto;
-    grid-template-areas:
-      "header header"
-      "search search"
-      "filter products";
+    width: 100%;
+    margin-top: 55px;
+    padding: 10px;
+    flex-direction: row;
   }
 }

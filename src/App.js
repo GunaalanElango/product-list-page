@@ -4,7 +4,7 @@ import Products from "./components/Product/Products";
 import axios from "axios";
 import Spinner from "./components/UI/Spinner";
 import Filter from "./components/Product/Filter";
-import Search from "./components/Product/Search";
+import Footer from "./components/UI/Footer";
 import classes from "./App.module.css";
 
 function App() {
@@ -38,6 +38,8 @@ function App() {
 
   const searchProductHandler = async (query) => {
     try {
+      setAcending(false);
+      setDescending(false);
       setIsLoading(true);
       const response = await fetchProducts();
 
@@ -77,19 +79,19 @@ function App() {
 
   return (
     <Fragment>
-      <Header title="Products" />
+      <Header
+        title="Products List Page"
+        searchFunction={searchProductHandler}
+      />
       <div className={classes.Wrapper}>
         <Filter
           ascending={ascending}
           descending={descending}
           sortClicked={sortProductHandler}
         />
-        <Search
-          length={productList.length}
-          searchFunction={searchProductHandler}
-        />
         {!isLoading ? <Products list={productList} /> : <Spinner />}
       </div>
+      <Footer />
     </Fragment>
   );
 }

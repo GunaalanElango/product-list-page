@@ -1,0 +1,25 @@
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  background-color: #137450;
+  align-items: center;
+}
+
+.Content {
+  display: flex;
+}
+
+.Content p {
+  font-size: 1.5rem;
+  padding: 0 10px;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .Content p {
+    font-size: 0.9rem;
+  }
+}

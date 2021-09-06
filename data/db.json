@@ -8,8 +8,8 @@
         },
         {
             "id": 2,
-            "imageURL": "https://26b5c92bej542nbc9b3nbw5o-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/7ac3c86e-e80f-4f27-811d-0a02045e5f3e-1000x1063.jpeg",
-            "name": "MRF cricket bat",
+            "imageURL": "https://m.media-amazon.com/images/I/71f0YCwN3sL.jpg",
+            "name": "SS Kashmir willow cricket bat",
             "price": 23444
         },
         {
@@ -56,6 +56,18 @@
         },
         {
             "id": 11,
+            "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
+            "name": "Football Boot",
+            "price": 3532
+        },
+        {
+            "id": 12,
+            "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
+            "name": "Football Boot",
+            "price": 2353
+        },
+        {
+            "id": 13,
             "imageURL": "https://m.timesofindia.com/img/81350769/Master.jpg",
             "name": "Football Boot",
             "price": 3532

@@ -2,16 +2,13 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  align-items: flex-start;
   width: 100%;
   padding: 5px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  grid-area: filter;
 }
 
 .Filter h4 {
   margin: 0;
-  text-decoration: underline;
 }
 
 .FilterOptContainer {
@@ -20,40 +17,44 @@
   flex-direction: column;
 }
 
-.Filter p {
+.FilterOpt {
   margin: 1.5px 0;
   font-size: 0.9rem;
-  padding-right: 15px;
+  background-color: rgba(19, 116, 80, 0.1);
+  padding: 2px 8px;
+  border-radius: 2px;
 }
 
 .Active {
   color: white;
-  background-color: #630f39;
-  padding: 2px 8px;
+  background-color: #093d2a;
 }
 
 @media screen and (min-width: 768px) {
   .Filter {
-    grid-area: filter;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: none;
-    position: fixed;
-    margin-top: 55px;
     width: 20%;
-    height: 100vh;
+    margin-right: 10px;
+    align-self: flex-start;
   }
 
   .Filter h4 {
     font-size: 1.5rem;
   }
 
-  .Filter p:hover {
+  .FilterOpt {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    background-color: rgba(19, 116, 80, 0.1);
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
+
+  .FilterOpt:hover {
     cursor: pointer;
   }
 
   .Active {
     color: white;
-    background-color: #630f39;
-    padding: 5px 10px;
+    background-color: #093d2a;
   }
 }

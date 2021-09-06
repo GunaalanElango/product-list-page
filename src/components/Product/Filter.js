@@ -8,13 +8,21 @@ const Filter = ({ ascending, descending, sortClicked }) => {
       <div className={classes.FilterOptContainer}>
         <p
           onClick={() => sortClicked(true)}
-          className={ascending ? classes.Active : ""}
+          className={
+            ascending
+              ? classes.FilterOpt + " " + classes.Active
+              : classes.FilterOpt
+          }
         >
           Price - low to high
         </p>
         <p
           onClick={() => sortClicked(false)}
-          className={descending ? classes.Active : ""}
+          className={
+            descending
+              ? classes.FilterOpt + " " + classes.Active
+              : classes.FilterOpt
+          }
         >
           Price - high to low
         </p>

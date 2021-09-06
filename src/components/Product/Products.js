@@ -14,12 +14,9 @@ const Products = ({ list }) => {
       />
     ));
   } else {
-    return (
-      <div className={classes.NoProductList}>
-        <h1>No products found!</h1>
-      </div>
-    );
+    products = <h1>Sorry, No results found</h1>;
   }
+
   return <div className={classes.ProductList}>{products}</div>;
 };
 
