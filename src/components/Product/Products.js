@@ -22,7 +22,9 @@ const Products = ({ list }) => {
       <div className={classes.Breadcrumbs}>
         <p className={classes.BreadcrumbsNav}>Home / Products / Sports</p>
         {list.length !== 0 ? (
-          <p className={classes.NoOfProduct}><span>{list.length}</span> Results</p>
+          <p className={classes.NoOfProduct}>
+            <span data-testid="length">{list.length}</span> Results
+          </p>
         ) : null}
       </div>
       <div className={classes.ProductList}>{products}</div>

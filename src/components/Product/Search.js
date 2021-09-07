@@ -12,6 +12,7 @@ const Search = ({ searchFunction }) => {
     event.preventDefault();
     if (event.key === "Enter") {
       searchFunction(searchValue);
+      setSearchValue("");
     } else {
       return;
     }
@@ -19,6 +20,7 @@ const Search = ({ searchFunction }) => {
 
   const clickSubmitHandler = () => {
     searchFunction(searchValue);
+    setSearchValue("");
   }
 
   return (
