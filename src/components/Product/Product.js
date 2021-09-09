@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./Product.module.css";
 
-const Product = ({ name, price, imageURL }) => {
+const Product = ({ name, price, imageURL, currency }) => {
   let formattedCurrency = new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "INR",
+    currency,
   }).format(price);
 
   return (

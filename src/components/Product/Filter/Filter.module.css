@@ -11,6 +11,15 @@
   margin: 0;
 }
 
+.FilterSection {
+  width: 100%;
+}
+
+.FilterSection p {
+  text-decoration: underline;
+  color: #093d2a;
+}
+
 .SortOptContainer {
   display: flex;
   width: 100%;
@@ -39,6 +48,7 @@
 
   .Filter h4 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   .SortOpt {
