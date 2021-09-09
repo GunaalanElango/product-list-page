@@ -11,13 +11,13 @@
   margin: 0;
 }
 
-.FilterOptContainer {
+.SortOptContainer {
   display: flex;
   width: 100%;
   flex-direction: column;
 }
 
-.FilterOpt {
+.SortOpt {
   margin: 1.5px 0;
   font-size: 0.9rem;
   background-color: rgba(19, 116, 80, 0.1);
@@ -41,7 +41,7 @@
     font-size: 1.5rem;
   }
 
-  .FilterOpt {
+  .SortOpt {
     margin: 2px 0;
     font-size: 0.9rem;
     background-color: rgba(19, 116, 80, 0.1);
@@ -49,12 +49,27 @@
     border-radius: 2px;
   }
 
-  .FilterOpt:hover {
+  .SortOpt:hover {
     cursor: pointer;
   }
 
   .Active {
     color: white;
     background-color: #093d2a;
+  }
+
+  .BrandContainer {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .BrandNameContainer {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  .BrandNameContainer input {
+    margin-right: 8px;
   }
 }

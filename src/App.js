@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useCallback } from "react";
 import Header from "./components/UI/Header";
 import Products from "./components/Product/Products";
 import axios from "axios";
@@ -10,6 +10,7 @@ import classes from "./App.module.css";
 function App() {
   const [productList, setProductList] = useState([]);
   const [showProducts, setShowProducts] = useState([]);
+  const [brands, setBrands] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [ascending, setAcending] = useState(false);
   const [descending, setDescending] = useState(false);
@@ -29,9 +30,34 @@ function App() {
     })();
   }, []);
 
+  const brandFilterHandler = useCallback((brands) => {
+    if (brands.length === 0) {
+      if (ascending) {
+        productList.sort((a, b) => a.price - b.price);
+      } else if (descending) {
+        productList.sort((a, b) => a.price - b.price);
+        productList.reverse();
+      }
+      setShowProducts(productList);
+      return;
+    }
+    let filteredProd = [];
+    for (const brand of brands) {
+      let result = [];
+      result = productList.filter((prod) => prod.brand === brand);
+      filteredProd = [...filteredProd, ...result];
+    }
+
+    if (ascending) {
+      filteredProd.sort((a, b) => a.price - b.price);
+    } else if (descending) {
+      filteredProd.sort((a, b) => a.price - b.price);
+      filteredProd.reverse();
+    }
+    setShowProducts(filteredProd);
+  }, [productList, ascending, descending]);
+
   const searchProductHandler = async (query) => {
-    setAcending(false);
-    setDescending(false);
     let queryString = query.trim().toLowerCase();
     let queryStrings = [];
 
@@ -69,6 +95,13 @@ function App() {
         prodList.push(product);
       }
     }
+
+    if (ascending) {
+      prodList.sort((a, b) => a.price - b.price);
+    } else {
+      prodList.sort((a, b) => a.price - b.price);
+      prodList.reverse();
+    }
     setShowProducts(prodList);
   };
 
@@ -87,6 +120,16 @@ function App() {
     setShowProducts(prodList);
   };
 
+  useEffect(() => {
+    let brandList = [];
+    for (const prod of productList) {
+      if (!brandList.includes(prod.brand)) {
+        brandList.push(prod.brand);
+      }
+    }
+    setBrands(brandList);
+  }, [productList]);
+
   return (
     <Fragment>
       <Header
@@ -98,6 +141,8 @@ function App() {
           ascending={ascending}
           descending={descending}
           sortClicked={sortProductHandler}
+          brands={brands}
+          brandFilter={brandFilterHandler}
         />
         {!isLoading ? <Products list={showProducts} /> : <Spinner />}
       </div>

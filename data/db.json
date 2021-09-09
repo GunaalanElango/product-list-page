@@ -4,55 +4,64 @@
             "id": 1,
             "imageURL": "https://www.allroundercricket.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/c/a/ca0090.png",
             "name": "Adidas Incurza Cricket bat",
-            "price": 189
+            "price": 189,
+            "brand": "Adidas"
         },
         {
             "id": 2,
             "imageURL": "https://m.media-amazon.com/images/I/71f0YCwN3sL.jpg",
             "name": "SS Kashmir willow Cricket bat",
-            "price": 400
+            "price": 400,
+            "brand": "SS"
         },
         {
             "id": 3,
             "imageURL": "https://cdn11.bigcommerce.com/s-kqqq4c5/images/stencil/2048x2048/products/395/924/11d7027407d84a5d9b7c84c39d4dbacd30f91615__39144.1514676402.jpg?c=2",
             "name": "GM English willow Cricket bat",
-            "price": 700
+            "price": 700,
+            "brand": "GM"
         },
         {
             "id": 4,
             "imageURL": "https://cdn.shopify.com/s/files/1/0324/8225/products/Sierra-350-477x496_110215_111218_7321eb21-877e-45bd-9add-115ed3975cd4_600x.png?v=1489191837",
             "name": "SG Cricket bat",
-            "price": 500
+            "price": 500,
+            "brand": "SG"
         },
         {
             "id": 6,
             "imageURL": "https://images.jdmagicbox.com/quickquotes/images_main/b00lb33s4u_sg_sunny_legend_english_willow_cricket_bat_size_5_color_may_vary__34704839_1.jpg",
             "name": "SG Kashmir willow bat",
-            "price": 345
+            "price": 345,
+            "brand": "SG"
         },
         {
             "id": 7,
             "imageURL": "https://26b5c92bej542nbc9b3nbw5o-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/435d5aae-144a-4e1e-bda8-74a8a6fc8bce-1000x1063.jpeg",
             "name": "Adidas XT black Cricket bat",
-            "price": 1000
+            "price": 1000,
+            "brand": "Adidas"
         },
         {
             "id": 8,
             "imageURL": "https://s3.envato.com/files/219166400/01.jpg",
             "name": "Adidas Pellara Cricket bat",
-            "price": 999
+            "price": 999,
+            "brand": "Adidas"
         },
         {
             "id": 9,
             "imageURL": "https://5.imimg.com/data5/VP/BD/MY-4931499/adidas-cricket-bat-500x500.jpg",
             "name": "Adidas XT white Cricket bat",
-            "price": 800
+            "price": 800,
+            "brand": "Adidas"
         },
         {
             "id": 10,
             "imageURL": "https://www.sportswing.in/wp-content/uploads/2019/02/neon_masterion_KW_p1.jpg",
             "name": "GM Neon Maestro Kashmir willow Cricket bat",
-            "price": 677
+            "price": 677,
+            "brand": "GM"
         }
     ]
 }
