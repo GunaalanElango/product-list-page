@@ -12,12 +12,13 @@ const PriceFilter = ({ priceFilter }) => {
   };
 
   const submitHandler = () => {
-    let minimum = min >= 100 && min <= 5000 ? min : 100;
-    let maximum = max <= 5000 && max >= 100 ? max : 5000;
-
-    setMax(maximum);
-    setMin(minimum);
-    priceFilter(minimum, maximum);
+    if (min > max) {
+      priceFilter(300, 1000);
+      setMin(300);
+      setMax(1000);
+      return;
+    }
+    priceFilter(min, max);
   };
 
   return (

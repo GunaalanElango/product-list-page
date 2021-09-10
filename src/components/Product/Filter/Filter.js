@@ -53,7 +53,7 @@ const Filter = ({
         <p>By Price</p>
         <PriceFilter priceFilter={priceFilter} />
       </section>
-      <h4>Sort by</h4>
+      <h4>Sort</h4>
       <div className={classes.SortOptContainer}>
         <p
           onClick={() => sortClicked(true)}

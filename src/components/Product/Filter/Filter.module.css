@@ -16,8 +16,7 @@
 }
 
 .FilterSection p {
-  text-decoration: underline;
-  color: #093d2a;
+  font-weight: bold;
 }
 
 .SortOptContainer {
@@ -27,7 +26,7 @@
 }
 
 .SortOpt {
-  margin: 1.5px 0;
+  margin: 5px 0;
   font-size: 0.9rem;
   background-color: rgba(19, 116, 80, 0.1);
   padding: 2px 8px;
@@ -52,7 +51,7 @@
   }
 
   .SortOpt {
-    margin: 2px 0;
+    margin: 5px 0;
     font-size: 0.9rem;
     background-color: rgba(19, 116, 80, 0.1);
     padding: 5px 10px;
