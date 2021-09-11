@@ -20,6 +20,10 @@
   color: #093d2a;
 }
 
+.Wrapper button:disabled {
+  cursor: not-allowed;
+}
+
 @media screen and (min-width: 768px) {
   .Wrapper {
     flex-direction: row;
@@ -37,4 +41,8 @@
   .Wrapper button {
     width: 30%;
   }
+
+  .Wrapper button:disabled {
+    cursor: not-allowed;
+  }  
 }

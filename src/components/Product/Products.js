@@ -7,11 +7,11 @@ const Products = ({ list }) => {
   if (list.length !== 0) {
     products = list.map((product) => (
       <Product
-        key={product.productId}
-        name={product.productName}
-        price={product.productPrice}
+        key={product.id}
+        name={product.name}
+        price={product.price}
         imageURL={product.imageUrl}
-        currency={product.priceCurrency}
+        currency={product.currencyType}
       />
     ));
   } else {

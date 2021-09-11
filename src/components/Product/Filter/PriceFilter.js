@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import classes from "./PriceFilter.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { productsActions } from "../../../app/productsSlice";
 
-const PriceFilter = ({ priceFilter }) => {
-  const [min, setMin] = useState(300);
+const PriceFilter = () => {
+  const [min, setMin] = useState(100);
   const [max, setMax] = useState(1000);
 
-  const rangeChangeHandler = (event) => {
-    let { name, value } = event.target;
+  const products = useSelector((state) => state.products);
+  const dispatch = useDispatch();
+
+  const rangeChangeHandler = (e) => {
+    let { name, value } = e.target;
     if (name === "min") setMin(value);
     else if (name === "max") setMax(value);
   };
 
   const submitHandler = () => {
-    if (min > max) {
-      priceFilter(300, 1000);
-      setMin(300);
-      setMax(1000);
-      return;
-    }
-    priceFilter(min, max);
+    let filteredProd = products.filter(
+      (prod) => prod.price >= min && prod.price <= max
+    );
+
+    dispatch(productsActions.setShowProductsData(filteredProd));
   };
 
   return (
@@ -35,7 +38,9 @@ const PriceFilter = ({ priceFilter }) => {
         name="max"
         onChange={rangeChangeHandler}
       />
-      <button onClick={submitHandler}>Go</button>
+      <button disabled={min > max ? true : false} onClick={submitHandler}>
+        Go
+      </button>
     </div>
   );
 };
