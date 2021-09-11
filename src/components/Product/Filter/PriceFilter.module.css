@@ -33,16 +33,21 @@
   }
 
   .Wrapper input {
-    width: 30%;
+    width: 80%;
     margin-right: 10px;
     margin-bottom: 0;
   }
 
   .Wrapper button {
-    width: 30%;
+    align-self: flex-end;
   }
 
   .Wrapper button:disabled {
     cursor: not-allowed;
-  }  
+  }
+
+  .InputControl {
+    display: flex;
+    flex-direction: column;
+  }
 }

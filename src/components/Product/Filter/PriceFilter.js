@@ -26,18 +26,25 @@ const PriceFilter = () => {
 
   return (
     <div className={classes.Wrapper}>
-      <input
-        type="number"
-        value={min}
-        name="min"
-        onChange={rangeChangeHandler}
-      />
-      <input
-        type="number"
-        value={max}
-        name="max"
-        onChange={rangeChangeHandler}
-      />
+      <div className={classes.InputControl}>
+        <label>Minimum</label>
+        <input
+          type="number"
+          value={min}
+          name="min"
+          onChange={rangeChangeHandler}
+        />
+      </div>
+      <div className={classes.InputControl}>
+        <label>Maximum</label>
+        <input
+          type="number"
+          value={max}
+          name="max"
+          onChange={rangeChangeHandler}
+        />
+      </div>
+
       <button disabled={min > max ? true : false} onClick={submitHandler}>
         Go
       </button>
